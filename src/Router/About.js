@@ -1,22 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState} from "react";
 const About = () => {
   const [count, setCount] = useState(0);
 
-  function handleClick() {
-    setCount((a) => a + 1);
+  function handleClick()
+  {
+    setCount(a=>a+2);
   }
+// props.handleClick(count);
+
   return (
     <>
+    
       <h1 style={{ textAlign: "center" }}> This is About Page </h1>
 
       <h1>The Counter is : {count}</h1>
       <button
-        onClick={() => {
-          handleClick();
-          handleClick();
-        }}
+        // onClick={() => {
+        //   handleClick();
+        //   handleClick();
+        // }}
+
+onClick={()=>{
+  handleClick();
+  handleClick();
+  handleClick();
+  handleClick();
+}}
         style={{
           backgroundColor: "blue",
           border: "0",
@@ -31,6 +42,9 @@ const About = () => {
       >
         Click Me!
       </button>
+      
+
+
       <div>
         <Link
           to="/"
@@ -49,6 +63,7 @@ const About = () => {
           Next page
         </Link>{" "}
       </div>
+  
     </>
   );
 };
