@@ -14,8 +14,6 @@ const Home = () => {
       <h1 style={{ textAlign: "center" }}>This is Home Page </h1>
       {/* <About handleClick={getData}/> */}
 
-     
-
       <Link
         to="/about"
         style={{
